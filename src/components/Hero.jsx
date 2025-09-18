@@ -36,7 +36,7 @@ const Hero = () => {
               View My Projects
             </button>
             <a
-              href="https://drive.google.com/file/d/1Ydbib1vOfEq969OLUK5pPfHcBcKq9LIZ/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1WNYtNseWKbrZtEo0jFXvgIUFLmpb7QUX/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-gray-700 text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center gap-2"
