@@ -18,7 +18,7 @@ const Projects = () => {
       description: "Responsive and interactive educational website with multi-page layouts for courses, staff, and contact sections. Built using React.js, HTML5, CSS3, and Bootstrap, featuring reusable components, smooth animations, and mobile-first design. Integrated Mock API for backend connectivity, enabling data storage and form submissions.",
       techStack: ["HTML", "CSS", "Java", "SQL", "Bootstrap", "JavaScript"],
       icon: <Monitor className="text-[#FF6600]" size={48} />,
-      githubLink: "https://github.com/Sridhar2601/-OEMS",
+      githubLink: "https://github.com/Sridhar2601/Intern_Hands-on_1",
       category: "Web Development"
     }
   ];

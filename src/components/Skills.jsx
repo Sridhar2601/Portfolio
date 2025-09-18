@@ -8,7 +8,8 @@ const Skills = () => {
     { name: 'CSS', icon: <Globe size={24} />, level: 90 },
     { name: 'Bootstrap', icon: <Globe size={24} />, level: 90 },
     { name: 'SQL', icon: <Database size={24} />, level: 80 },
-    { name: 'JavaScript', icon: <Code size={24} />, level: 70 }
+    { name: 'JavaScript', icon: <Code size={24} />, level: 70 },
+    { name: 'React.js', icon: <Code size={24} />, level: 70 }
   ];
 
   const softSkills = [
