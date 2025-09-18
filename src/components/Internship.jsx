@@ -12,7 +12,7 @@ const Internship = () => {
         "Completed a front-end development internship focusing on building responsive web applications. Gained hands-on experience with React.js, HTML5, CSS3, JavaScript, Bootstrap, and version control using Git & GitHub. Contributed to front-end projects with reusable components, responsive UI, and client deliverables.",
       techStack: ["React.js", "HTML5", "CSS3", "JavaScript", "Bootstrap", "Git/GitHub"],
       icon: <Briefcase className="text-[#FF6600]" size={48} />,
-      certificateLink: "https://drive.google.com/file/d/1ohhpcAlYThrFPnEhN9AJ2XuUiSjDB0Bn/view?usp=drive_link", // path to your internship certificate
+      certificateLink: "https://drive.google.com/file/d/1ohhpcAlYThrFPnEhN9AJ2XuUiSjDB0Bn/view?usp=drive_link",
     },
   ];
 
@@ -76,7 +76,8 @@ const Internship = () => {
                 {/* Action Buttons */}
                 <div className="flex space-x-4">
                   <a
-                    href={internship.certificateLink}
+                    // href={internship.certificateLink}
+                    href="https://drive.google.com/file/d/1ohhpcAlYThrFPnEhN9AJ2XuUiSjDB0Bn/view?usp=drive_link"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center space-x-2 bg-[#0A192F] text-white px-6 py-3 rounded-lg hover:bg-[#112240] transition-colors duration-300 font-medium"
