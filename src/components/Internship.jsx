@@ -12,7 +12,7 @@ const Internship = () => {
         "Completed a front-end development internship focusing on building responsive web applications. Gained hands-on experience with React.js, HTML5, CSS3, JavaScript, Bootstrap, and version control using Git & GitHub. Contributed to front-end projects with reusable components, responsive UI, and client deliverables.",
       techStack: ["React.js", "HTML5", "CSS3", "JavaScript", "Bootstrap", "Git/GitHub"],
       icon: <Briefcase className="text-[#FF6600]" size={48} />,
-      certificateLink: "/Sridhar_B_intership_front-end.pdf", // path to your internship certificate
+      certificateLink: "https://drive.google.com/file/d/1ohhpcAlYThrFPnEhN9AJ2XuUiSjDB0Bn/view?usp=drive_link", // path to your internship certificate
     },
   ];
 
