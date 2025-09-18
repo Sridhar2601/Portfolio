@@ -10,6 +10,7 @@ import Education from './components/Education';
 import Contact from './components/Contact';
 import Portfolio from './Portfolio';
 import Liveprojects from './components/Liveprojects';
+import Internship from './components/Internship';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Navigation />
         <Hero />
         <About />
+        <Internship/>
         <Projects />
         <Liveprojects/>
         <Skills />
