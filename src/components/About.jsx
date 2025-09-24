@@ -1,6 +1,6 @@
 import React from 'react';
 import { User, GraduationCap, Target } from 'lucide-react';
-import sridharImg from "../assets/21cs090 SRIDHAR B.JPG";
+import sridharImg from "./sridhar.jpg";
 
 const About = () => {
   return (
