@@ -1,5 +1,6 @@
 import React from 'react';
 import { User, GraduationCap, Target } from 'lucide-react';
+import sridharImg from "../assets/21cs090 SRIDHAR B.JPG";
 
 const About = () => {
   return (
@@ -17,7 +18,7 @@ const About = () => {
           <div className="flex justify-center lg:justify-start">
             <div className="w-80 h-100 rounded-full flex items-center justify-center ps-5 ms-5">
               <img style={{borderRadius:20}}
-                src="./21cs090 SRIDHAR B.JPG"
+                src={sridharImg}
                 alt="Sridhar_Profile"
                 className="w-full h-full object-cover"
               />
