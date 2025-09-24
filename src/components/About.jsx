@@ -15,9 +15,9 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
 <div className="flex justify-center lg:justify-start p-4">
-  <div className="w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 rounded-full overflow-hidden flex items-center justify-center">
-    <img
-      src="/images/sridhar.jpg"
+  <div className="w-40 h-100 sm:w-60 sm:h-80 md:w-80 md:h-80  overflow-hidden flex items-center justify-center">
+    <img style={{borderRadius:20}}
+      src="/image/sridhar.jpg"
       alt="Sridhar_Profile"
       className="w-full h-full object-cover"
     />
