@@ -14,15 +14,15 @@ const About = () => {
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
-<div className="flex justify-center lg:justify-start p-4">
-  <div className="w-40 h-100 sm:w-60 sm:h-80 md:w-80 md:h-80  overflow-hidden flex items-center justify-center">
-    <img style={{borderRadius:20}}
-      src="/image/sridhar.jpg"
-      alt="Sridhar_Profile"
-      className="w-full h-full object-cover"
-    />
-  </div>
-</div>
+          <div className="flex justify-center lg:justify-start p-4">
+            <div className="w-40 h-100 sm:w-60 sm:h-80 md:w-80 md:h-80  overflow-hidden flex items-center justify-center">
+              <img style={{ borderRadius: 20 }}
+                src="/image/sridhar.jpg"
+                alt="Sridhar_Profile"
+                className="w-full h-full object-cover"
+              />
+            </div>
+          </div>
 
 
           {/* Content */}
