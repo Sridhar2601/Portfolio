@@ -195,7 +195,6 @@
 // export default Contact;
 
 
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Mail, Github, Linkedin, MessageCircle, Send } from 'lucide-react';
@@ -208,27 +207,22 @@ const Contact = () => {
   });
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // Replace with your deployed backend URL
       const response = await axios.post(
-        'https://backend-w5pn.onrender.com/api/contact',
+        'http://localhost:5000/api/contact',
         formData
       );
-
       if (response.data.success) {
-        alert('Message sent successfully! I will get back to you soon.');
-        setFormData({ name: '', email: '', message: '' }); // reset form
+        alert('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
       }
     } catch (error) {
-      console.error('Error sending message:', error);
+      console.error(error.response || error);
       alert('Oops! Something went wrong. Please try again later.');
     }
   };
@@ -363,3 +357,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
