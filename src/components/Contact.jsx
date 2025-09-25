@@ -198,7 +198,7 @@
 
 import React, { useState } from 'react';
 import axios from 'axios';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, MessageCircle } from 'lucide-react';
+import { Mail, Github, Linkedin, MessageCircle, Send } from 'lucide-react';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -214,18 +214,23 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    axios.post("http://localhost:5000/api/contact", formData)
-      .then(res => {
-        alert(res.data.message);
-        setFormData({ name: '', email: '', message: '' });
-      })
-      .catch(err => {
-        alert("Error sending message. Please try again.");
-        console.error(err);
-      });
+    try {
+      // Replace with your deployed backend URL
+      const response = await axios.post(
+        'https://backend-w5pn.onrender.com/api/contact',
+        formData
+      );
 
+      if (response.data.success) {
+        alert('Message sent successfully! I will get back to you soon.');
+        setFormData({ name: '', email: '', message: '' }); // reset form
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      alert('Oops! Something went wrong. Please try again later.');
+    }
   };
 
   const contactInfo = [
@@ -258,16 +263,15 @@ const Contact = () => {
           </h2>
           <div className="w-24 h-1 bg-[#FF6600] mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Ready to start a conversation? I'm always open to discussing new opportunities,
+            Ready to start a conversation? I'm always open to discussing new opportunities, 
             collaborating on projects, or just having a chat about technology.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Information */}
+          {/* Contact Info */}
           <div>
             <h3 className="text-2xl font-bold text-[#0A192F] mb-8">Let's Connect</h3>
-
             <div className="space-y-6 mb-8">
               {contactInfo.map((contact, index) => (
                 <a
@@ -289,48 +293,11 @@ const Contact = () => {
                 </a>
               ))}
             </div>
-
-            {/* Quick Message */}
-            <div className="bg-gradient-to-r from-[#0A192F] to-[#112240] p-8 rounded-lg text-white">
-              <div className="flex items-center mb-4">
-                <MessageCircle className="text-[#FF6600] mr-3" size={32} />
-                <h4 className="text-xl font-bold">Quick Response</h4>
-              </div>
-              <p className="mb-4 text-gray-300">
-                I typically respond to messages within 24 hours. Feel free to reach out through
-                any of the channels above or use the contact form.
-              </p>
-              <div className="flex space-x-4">
-                <a
-                  href="https://www.linkedin.com/in/sridhar-b-1a8708282"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#FF6600] hover:text-white transition-colors duration-300"
-                >
-                  <Linkedin size={24} />
-                </a>
-                <a
-                  href="https://github.com/Sridhar2601"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#FF6600] hover:text-white transition-colors duration-300"
-                >
-                  <Github size={24} />
-                </a>
-                <a
-                  href="mailto:sridharchml@gmail.com"
-                  className="text-[#FF6600] hover:text-white transition-colors duration-300"
-                >
-                  <Mail size={24} />
-                </a>
-              </div>
-            </div>
           </div>
 
           {/* Contact Form */}
           <div>
             <h3 className="text-2xl font-bold text-[#0A192F] mb-8">Send a Message</h3>
-
             <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg">
               <div className="mb-6">
                 <label htmlFor="name" className="block text-[#0A192F] font-semibold mb-2">
